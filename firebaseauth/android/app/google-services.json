@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "251483012039",
+    "project_id": "ecomfruits",
+    "storage_bucket": "ecomfruits.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251483012039:android:7c6004eef4d9afaaa677e2",
+        "android_client_info": {
+          "package_name": "com.example.firebaseauth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "251483012039-ojuecgc6liv26714qrf346tctvm3pkrj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firebaseauth",
+            "certificate_hash": "7068b098f79ea57c079889c010a86248595e10ae"
+          }
+        },
+        {
+          "client_id": "251483012039-0vhv2rd46i885bf4g4ivg21s3sig2o7f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVUtqbHRJFLfcXg5ieM1ze4oMx5areYXU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "251483012039-0vhv2rd46i885bf4g4ivg21s3sig2o7f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
