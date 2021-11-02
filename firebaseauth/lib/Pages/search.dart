@@ -14,16 +14,15 @@ class Search extends StatefulWidget {
 }
 
 class _SearchState extends State<Search> {
+  TextEditingController? searchController;
   @override
   void initState() {
     super.initState();
-    TextEditingController? searchController = TextEditingController();
+    searchController = TextEditingController();
   }
-
+  String searchString = '';
   @override
   Widget build(BuildContext context) {
-    String? searchString;
-
     // var database = FirebaseFirestore.instance;
     return SafeArea(
       child: Scaffold(
@@ -36,6 +35,11 @@ class _SearchState extends State<Search> {
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
                   child: TextField(
+                    onChanged: (val) {
+                      setState(() {
+                        searchString = searchController!.text;
+                      });
+                    },
                     onSubmitted: (val) {
                       setState(() {
                         searchString = val;
