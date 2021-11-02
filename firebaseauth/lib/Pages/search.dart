@@ -14,16 +14,16 @@ class Search extends StatefulWidget {
 }
 
 class _SearchState extends State<Search> {
+  TextEditingController? searchController;
   @override
   void initState() {
     super.initState();
-    TextEditingController? searchController = TextEditingController();
+    searchController = TextEditingController();
   }
 
+  String? searchString;
   @override
   Widget build(BuildContext context) {
-    String? searchString;
-
     // var database = FirebaseFirestore.instance;
     return SafeArea(
       child: Scaffold(
@@ -47,7 +47,7 @@ class _SearchState extends State<Search> {
                       suffixIcon: IconButton(
                         icon: Icon(Icons.search),
                         onPressed: () {
-                          searchController.clear();
+                          searchController?.clear();
                         },
                       ),
                     ),
