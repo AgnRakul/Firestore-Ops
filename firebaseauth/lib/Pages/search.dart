@@ -21,6 +21,12 @@ class _SearchState extends State<Search> {
     searchController = TextEditingController();
   }
 
+  @override
+  void dispose() {
+    super.dispose();
+    searchController!.dispose();
+  }
+
   String? searchString;
   @override
   Widget build(BuildContext context) {
@@ -36,9 +42,9 @@ class _SearchState extends State<Search> {
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
                   child: TextField(
-                    onSubmitted: (val) {
+                    onChanged: (val) {
                       setState(() {
-                        searchString = val;
+                        searchString = searchController!.text;
                       });
                     },
                     controller: searchController,
@@ -68,7 +74,10 @@ class _SearchState extends State<Search> {
                       }
                       switch (snapshot.connectionState) {
                         case ConnectionState.waiting:
-                          return LinearProgressIndicator();
+                          return Padding(
+                            padding: const EdgeInsets.all(32.0),
+                            child: Center(child: LinearProgressIndicator()),
+                          );
 
                         case ConnectionState.none:
                           return Text('Error');
